@@ -1,0 +1,20 @@
+version: 0.1
+
+run-as: root
+
+phases:
+      
+  build:
+    commands:
+      
+      - docker build -t munzir .
+     
+
+   
+  post_build:
+    commands:
+      - echo "Build completed successfully!"
+    
+artifacts:
+  files:
+    - '**/*'

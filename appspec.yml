@@ -1,0 +1,13 @@
+version: 0.0
+os: linux
+
+hooks:
+   AfterInstall:
+    - location: scripts/http.sh
+      timeout: 300
+      runas: root
+   ApplicationStart:
+    - location: scripts/starthttp.sh
+      timeout: 300
+      runas: root
+
